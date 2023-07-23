@@ -28,13 +28,14 @@ app.post('/events', (req, res) => {
         console.log(err.message);
     }
     ));
+    res.send({ status: 'OK' });
+});
 
     app.get('/events', (req, res) => {
         res.send(events);
     });
 
-    res.send({ status: 'OK' });
-});
+    
 
 app.listen(4005, () => {
     console.log('Listening on 4005');
