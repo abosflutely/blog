@@ -23,7 +23,6 @@ metadata:
 spec:
   selector:
     app: posts
-  
   ports:
     - name: posts
       protocol: TCP
