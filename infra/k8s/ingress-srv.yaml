@@ -10,6 +10,10 @@ spec:
       http:
         paths:
           - path: /posts
+            pathType: Prefix
             backend:
-              serviceName: posts-clusterip-srv
-              servicePort: 4000
+              service:
+                name: posts-clusterip-srv
+                port:
+                  number: 4000
+              
